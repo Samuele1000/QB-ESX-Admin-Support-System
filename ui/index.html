@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Reports</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- User Report Form -->
+    <div class="container" id="report-form" style="display: none;">
+        <div class="header">
+            <h1>Create Report</h1>
+            <p>Describe your issue clearly for our staff.</p>
+        </div>
+        <div class="content">
+            <textarea id="report-reason" placeholder="Type your reason here... (e.g. Help I'm stuck, Player ID 5 is RDMing)"></textarea>
+        </div>
+        <div class="footer">
+            <button class="btn btn-secondary" id="close-btn">Cancel</button>
+            <button class="btn btn-primary" id="submit-btn">Send Report</button>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="container admin-panel" id="admin-panel" style="display: none;">
+        <div class="header">
+            <h1>Active Reports</h1>
+            <p>Manage incoming player reports.</p>
+            <button class="close-icon" id="admin-close-btn">&times;</button>
+        </div>
+        <div class="report-list" id="report-list">
+            <!-- Reports will be inserted here by JS -->
+            <div class="empty-state">No active reports.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
